@@ -10,12 +10,16 @@ functions:
     environment:
       read_timeout: 120   # 2 mins
       write_timeout: 120
- 
+      write_debug: false
+      read_debug: false
+
   gifit:
     skip_build: true
-    image: alexellis/gif-maker
+    image: alexellis/gif-maker:0.1a
     fprocess: "sh ./entry.sh"
     environment:
       read_timeout: 120   # 2 mins
       write_timeout: 120
+      write_debug: false
+      read_debug: false
   
