@@ -1,0 +1,21 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  youtubedl:
+    skip_build: true
+    image: alexellis2/faas-youtubedl:0.2
+    fprocess: "sh ./entry.sh"
+    environment:
+      read_timeout: 120   # 2 mins
+      write_timeout: 120
+ 
+  gifit:
+    skip_build: true
+    image: alexellis/gif-maker
+    fprocess: "sh ./entry.sh"
+    environment:
+      read_timeout: 120   # 2 mins
+      write_timeout: 120
+  
