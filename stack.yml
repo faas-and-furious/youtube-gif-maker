@@ -5,7 +5,7 @@ provider:
 functions:
   youtubedl:
     skip_build: true
-    image: alexellis2/faas-youtubedl:0.2
+    image: alexellis2/faas-youtubedl:latest
     fprocess: "sh ./entry.sh"
     environment:
       read_timeout: 120   # 2 mins
@@ -15,7 +15,7 @@ functions:
 
   gifit:
     skip_build: true
-    image: alexellis/gif-maker:0.1a
+    image: alexellis/gif-maker:latest
     fprocess: "sh ./entry.sh"
     environment:
       read_timeout: 120   # 2 mins
